@@ -1,0 +1,97 @@
+[
+ {
+ "id": 0,
+ "name":"Flutter Kicks",
+ "details": "Lay on back and move legs back and forth as if swimming freestyle, keeping them at least 4-6 inches above the ground"
+ },
+ {
+ "id": 1,
+ "name":"Bicycle Sit Ups",
+ "details": "Assume crunches / sit up position and touch left knee to right elbow while extending right leg.  Do the same switching to right knee touching left elbow while extending left leg."
+ }, {
+ "id": 2,
+ "name":"Mountain Climbers",
+ "details": "Assume push up position.  Pull right leg up to your center of mass (around you hips), getting knees to about 90 degrees.  At the same time, move right leg back to pushup position at the same time as moving left leg to same position right leg was previously in"
+ }, {
+ "id": 3,
+ "name":"Crunches",
+ "details": "Pull head up 6-8 inches to touch elbows to knees.  Knees are held slightly closer to chest than 90 degrees (straight up)"
+ }, {
+ "id": 4,
+ "name":"Leg Lifters",
+ "details": "Lay on your back and lift legs from 4-6 inches off the ground to straight up and back.  "
+ }, {
+ "id": 5,
+ "name":"Supermans",
+ "details": "Lay on belly.  Extend your back muscles to pull your extended arms and legs up.  You're my hero now."
+ }, {
+ "id": 6,
+ "name":"Leg Spreaders",
+ "details": "Lay on back and hold legs 4-6 inches above the ground.  Spread legs to beyond shoulder width and back to together."
+ }, {
+ "id": 7,
+ "name":"Side Planks",
+ "details": "Splits 30 seconds between left and right.  Similar to a Plank, except one arm is in the air and the other is holding you up.  Ribs should be facing the ground, left or right side depending on which 30 seconds."
+ }, {
+ "id": 8,
+ "name":"Russian Twist",
+ "details":  "Assume crunch position with feet and head held above floor.  Move exercise ball or interlocked hands back and forth above abs alternating sides hitting the floor."
+ }, {
+ "id": 9,
+ "name":"Russian Twist",
+ "details":  "Assume crunch position with feet and head held above floor.  Move exercise ball or interlocked hands back and forth above abs alternating sides hitting the floor."
+ }, {
+ "id": 10,
+ "name":"Russian Twist",
+ "details":  "Assume crunch position with feet and head held above floor.  Move exercise ball or interlocked hands back and forth above abs alternating sides hitting the floor."
+ }, {
+ "id": 11,
+ "name":"Sideways Crunches",
+ "details": "Crunches, where you alternate touching your left elbow to your right knee and vice versa to work your obliques more."
+ }, {
+ "id": 12,
+ "name":"Sit Ups",
+ "details": "Hands interlocked behind head.  Feet on floor, pull yourself up and touch elbows to your knees."
+ }, {
+ "id": 13,
+ "name":"Wipers",
+ "details": "Assume sit up position with legs upright to knees and cavs angled at 90 degrees.  Extend arms out.  Move legs back and forth side to side."
+ }, {
+ "id": 14,
+ "name":"Scissors",
+ "details": "Start lying on back holding feet 4-6 inches in the air.  Spread legs out beyond shoulder width and back to in line, keeping height."
+ }, {
+ "id": 15,
+ "name":"Toe Taps",
+ "details": "Assume sit up position.  Tap each toe on the ground in succession, keeping legs at right angle."
+ }, {
+ "id": 16,
+ "name":"Lying Knee Raises",
+ "details": "Lying Knee Raises: \n Start lying on your back.  Hands tucked below you.  raise knees into sit up position and back to lying down. Up and back equals one."
+ }, {
+ "id": 17,
+ "name":"Figure 8's",
+ "details": "Keep legs together while lying on back and make 8's with your legs."
+ }, {
+ "id": 18,
+ "name":"Pike Ups (V-Ups)",
+ "details": "Lay on your back with your arms extended out above your head.  Keep legs and arms straight, bend at the hips and move to touch your hands to your feet.  Though it is probably best you don't reach it, you should make a V with your body."
+ }, {
+ "id": 19,
+ "name":"Side Plank Raises",
+ "details": "Similar to Side Planks but raise your free leg up and down while on side.  Splits 30 seconds on either side."
+ }, {
+ "id": 20,
+ "name":"Alt. Sides Superman",
+ "details": "Similar to Supermans, but instead alternate between lifting your right arm and left leg, and then your left arm and right leg."
+ }, {
+ "id": 21,
+ "name":"Reverse Plank",
+ "details": "Lay on back and hold torso up with elbows.  Hold your body straight using elbow/forearms and heels as points of contact, engaging abs."
+ }, {
+ "id": 22,
+ "name":"Donkey Kicks",
+ "details": "Get on hands and knees, and move legs at hip up so that thigh is level with torso while keeping knee at 90 degrees.  Move back down and repeat with opposite leg"
+ }
+ 
+ ]
