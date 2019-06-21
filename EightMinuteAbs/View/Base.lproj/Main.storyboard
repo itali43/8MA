@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie8-kZ-ja3">
-                                <rect key="frame" x="120.5" y="183" width="134.5" height="60"/>
+                                <rect key="frame" x="120.5" y="171" width="134.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134.5" id="ca6-Io-1We"/>
                                     <constraint firstAttribute="height" constant="60" id="w8v-Y9-YiK"/>
@@ -177,7 +177,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cez-s7-r4B">
-                                <rect key="frame" x="16" y="251" width="343" height="25"/>
+                                <rect key="frame" x="16" y="239" width="343" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="MEO-pc-Imq"/>
                                 </constraints>
@@ -233,7 +233,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kn-Gf-9wJ">
-                                <rect key="frame" x="16" y="280" width="343" height="25"/>
+                                <rect key="frame" x="16" y="268" width="343" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Gcc-BT-eMZ"/>
                                 </constraints>
@@ -303,11 +303,8 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALH-xV-Msg" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="30" y="13" width="315" height="400"/>
+                                <rect key="frame" x="30" y="13" width="315" height="376"/>
                                 <color key="backgroundColor" name="backgroundBlue"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="Blv-Td-3H5"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="ibRingStyle">
                                         <integer key="value" value="2"/>
