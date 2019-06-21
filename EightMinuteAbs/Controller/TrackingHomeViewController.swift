@@ -40,7 +40,7 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
     var daysFromWorkOutArr = [Double]()
     var totalWorkouts = 0
     
-    var datesWorkedOut = [Date(timeIntervalSince1970: TimeInterval(1560205201)), Date(timeIntervalSince1970: TimeInterval(1560205221)), Date(timeIntervalSince1970: TimeInterval(1559264400)),  Date(timeIntervalSince1970: TimeInterval(1560032400)), Date(timeIntervalSince1970: TimeInterval(1557019400))]
+    var datesWorkedOut = [Date]()
 
     let realm = try! Realm()
 
@@ -165,6 +165,7 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
         if hadWorkout == false {
             cell.backgroundColor = UIColor.lightGray //UIColor(red: 96/100, green: 99/100, blue: 100/100, alpha: 1.0)
         } else {
+            print("had some!: \(indexPath.row)")
             cell.backgroundColor = UIColor(red: 67/100, green: 78/100, blue: 92/100, alpha: 1.0)
         }
         
@@ -337,8 +338,23 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
             
             // Dates to Days: build out more
             let now = Date()
+            let timeZone = NSTimeZone.system
+            let timeZoneOffset = timeZone.secondsFromGMT(for: now) / 3600
+            print ("timezone: \(timeZoneOffset)")
+//            print(now.compare(timeZoneOffset))
+            if timeZoneOffset < 0 {
+                // timezone is negative, subtract
+                
+            } else {
+                // timezone is positive, add
+            }
+            
+            
+            print(Date().description(with: .current))
+            print("wtf date?")
             print ("now: \(now)")
             for date in self.datesWorkedOut{
+                
                 print("then: \(date)")
                 var diff = now - date
                 var diffdays = (diff / 86400).rounded(.down)

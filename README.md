@@ -6,8 +6,10 @@ Eight Minute Abs enables you to do 8 Core Strength Exercises in 8 minutes (1 min
 [Available Now on the iOS App Store](https://itunes.apple.com/us/app/eight-minute-abs/id1416851451?mt=8)
 
 ### Future Features to Look out for:
-- Concise Explainers for various core exercises
-- (Possible Direction) AR Rewards upon satisfactory completion
+- Explanatory images for each exercise displayed upon screen
 - ~~Accompanying Robot that does exercise for you~~    
 
 Any Requests send them my way via the issues tab here on Github
+
+### Known bugs:
+- seems to be a problem with workouts not aligning to proper days when selected in tracker, probably something with timezones
