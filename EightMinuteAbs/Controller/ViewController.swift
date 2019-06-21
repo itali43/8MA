@@ -20,7 +20,7 @@ import RealmSwift
 class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     let testing = false
-    
+    var whyDoesItBeepCounter = 0
     @IBOutlet weak var trackerO: UIButton!
     @IBAction func trackerA(_ sender: Any) {
         performSegue(withIdentifier: "toTracker", sender: nil)
@@ -194,12 +194,19 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             print ("timer is running is false... must be a new beginning")
             itsAReset = false
             runTimer()
-            self.startBTN.isEnabled = false
             self.resetBTN.isEnabled = true
             self.pauseBTN.setImage(UIImage(named: "Pause")!, for: .normal)
             self.resumeTapped = false
             trackerBTN.isEnabled = false
+            
+            if whyDoesItBeepCounter > 0 {
+                soundAirHorn()
+                buzz()
+                randomExerciseUpdate()
 
+            } else {
+                whyDoesItBeepCounter += 1
+            }
             
             
         } else {
@@ -245,8 +252,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     @IBOutlet weak var stopWatchImage: UIImageView!
     
     
-    @IBOutlet weak var startBTN: UIButton!
-    @IBAction func startAction(_ sender: Any) {
+//    @IBOutlet weak var startBTN: UIButton!
+//    @IBAction func startAction(_ sender: Any) {
 //        if isTimerRunning == false {
 //            runTimer()
 //            self.startBTN.isEnabled = false
@@ -254,7 +261,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
 //
 //        }
 
-    }
+//    }
     
     @IBOutlet weak var resetBTN: UIButton!
     
@@ -282,7 +289,6 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         self.pauseBTN.setImage(UIImage(named: "Play")!, for: .normal)
         
         skipExerciseBTN.isEnabled = false
-        self.startBTN.isEnabled = true
         trackerBTN.isEnabled = true
         pauseBTN.isEnabled = true
 
@@ -354,14 +360,11 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         UIApplication.shared.isIdleTimerDisabled = false
 
         // Reset All Buttons/Navigation
-        self.startBTN.isEnabled = true
         self.pauseBTN.setImage(UIImage(named: "Play")!, for: .normal)
 
         pauseBTN.layer.cornerRadius = 0.5 * pauseBTN.bounds.size.width
         pauseBTN.clipsToBounds = true
         
-        startBTN.layer.cornerRadius = 0.5 * startBTN.bounds.size.width
-        startBTN.clipsToBounds = true
         
         resetBTN.layer.cornerRadius = 0.5 * resetBTN.bounds.size.width
         resetBTN.clipsToBounds = true

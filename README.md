@@ -8,6 +8,9 @@ Eight Minute Abs enables you to do 8 Core Strength Exercises in 8 minutes (1 min
 ### Future Features to Look out for:
 - Explanatory images for each exercise displayed upon screen
 - ~~Accompanying Robot that does exercise for you~~    
+- Modified Info button (likely embedded in explanatory graphics)
+- In App Purchases of Other workouts
+- Refactor suiting code to current features
 
 Any Requests send them my way via the issues tab here on Github
 
