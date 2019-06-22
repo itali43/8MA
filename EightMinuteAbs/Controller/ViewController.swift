@@ -357,6 +357,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         progressRing.innerRingColor = .white
         pauseBTN.isEnabled = true
         skipExerciseBTN.isEnabled = false
+        resetBTN.isEnabled = false
         UIApplication.shared.isIdleTimerDisabled = false
 
         // Reset All Buttons/Navigation
