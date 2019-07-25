@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,10 +20,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogoV3" translatesAutoresizingMaskIntoConstraints="NO" id="v6h-PM-2rA">
-                                <rect key="frame" x="59" y="205" width="256" height="256"/>
+                                <rect key="frame" x="-146" y="0.0" width="667" height="667"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="256" id="IPd-JV-kvY"/>
-                                    <constraint firstAttribute="width" constant="256" id="eFj-VP-6VO"/>
+                                    <constraint firstAttribute="width" secondItem="v6h-PM-2rA" secondAttribute="height" multiplier="1:1" id="SLS-yz-ZDw"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -31,6 +30,8 @@
                         <constraints>
                             <constraint firstItem="v6h-PM-2rA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="50N-Uk-aYn"/>
                             <constraint firstItem="v6h-PM-2rA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8pd-oq-21g"/>
+                            <constraint firstItem="v6h-PM-2rA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hU1-ea-EJG"/>
+                            <constraint firstAttribute="bottom" secondItem="v6h-PM-2rA" secondAttribute="bottom" id="sEg-Xi-zla"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

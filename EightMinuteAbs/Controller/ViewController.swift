@@ -114,7 +114,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
 
     @objc func updateTimer() {
-        print (seconds)
+        print(seconds)
         if seconds < 1 {
             timer.invalidate()
             roundNumberLabel.text = "1 of 8"
@@ -131,8 +131,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
                 print("written")
             }
             // sound off for the last one!
-            soundAirHorn()
-            buzz()
+//            soundAirHorn()
+//            buzz()
             // let user access history again
             trackerBTN.isEnabled = true
             pauseBTN.isEnabled = false
@@ -171,17 +171,27 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
 
     func randomExerciseUpdate() { // should add a non repeating feature later
         print("update exercise")
-        if roundCounter != 8 {
+//        if roundCounter != 8 {
             let randomIndex = Int(arc4random_uniform(UInt32(exercises.count)))
             exerciseLabel.text = exercises[randomIndex]
             abExercise = AbEx(name: AbEx.getName(id: randomIndex), details: AbEx.getDetails(id: randomIndex), id: randomIndex)
             exerciseLabel.text = abExercise.name
-        } else {print("ending")}
+//        } else {print("ending")}
     }
     
     func soundAirHorn() {
-        Sound.play(file: "AirHorn.wav")
+        if UserDefaults.standard.bool(forKey: "isAirhorn") == true {
+            // play airhorn
+            print("sound air horn")
+            Sound.play(file: "AirHorn.wav")
+        } else {
+            // play cheering
+            print("sound cheering")
+            Sound.play(file: "Cheering.wav")
+        }
+
     }
+    
     
     func buzz() {
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
@@ -263,6 +273,35 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
 
 //    }
     
+    
+    @IBOutlet weak var settingsBTN: UIBarButtonItem!
+    
+    @IBAction func settingsAction(_ sender: Any) {
+        print("to settings")
+        performSegue(withIdentifier: "toSettings", sender: nil)
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var resetBTN: UIButton!
     
     @IBAction func resetAction(_ sender: Any) {
@@ -336,12 +375,30 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // if never been used, add the sound default and set to airhorn. if has, do nothing
+        if Agrippa.defaultexists(forKey: "isAirhorn") == false {
+            UserDefaults.standard.set(true, forKey: "isAirhorn")
+        } else {
+            print("isAirhorn Already Exists")
+        }
 
         if let title = skipExerciseBTN.titleLabel?.text{
             skipExerciseBTN.setAttributedTitle(title.getUnderLineAttributedText(), for: .normal)
         }
+//        print("hi fonts")
+//        for fontFamilyName in UIFont.familyNames {
+//            print("family: \(fontFamilyName)\n")
+//            
+//            for fontName in UIFont.fontNames(forFamilyName: fontFamilyName) {
+//                print("font: \(fontName)")
+//            }
+//        }
 
-        
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.white,
+             NSAttributedString.Key.font: UIFont(name: "InterUI-Regular", size: 30)!]
+
         UIApplication.shared.statusBarStyle = .lightContent
         UIApplication.shared.statusBarStyle = .default
 

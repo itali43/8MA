@@ -22,6 +22,13 @@
 		4F634421216174CD0099687C /* exercises.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F634420216174CD0099687C /* exercises.json */; };
 		4F7ACD6A22A5071500494719 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7ACD6922A5071500494719 /* Colors.swift */; };
 		4F921C542216D6B000D0806C /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F921C532216D6B000D0806C /* Wallet.swift */; };
+		4F9DB94522E6E86800038633 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F9DB94422E6E86800038633 /* GoogleService-Info.plist */; };
+		4F9DB94722E6EECA00038633 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9DB94622E6EECA00038633 /* SettingsViewController.swift */; };
+		4F9DB94922E6EEE100038633 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9DB94822E6EEE100038633 /* FeedbackViewController.swift */; };
+		4FE2EB5B22E7C15D0089F43C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE2EB5A22E7C15D0089F43C /* StoreKit.framework */; };
+		4FE2EB5F22E7C2420089F43C /* 8MAPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2EB5E22E7C2420089F43C /* 8MAPurchases.swift */; };
+		4FE2EB6122E7C2D40089F43C /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2EB6022E7C2D40089F43C /* IAPHelper.swift */; };
+		4FE2EB6322E7C41F0089F43C /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2EB6222E7C41F0089F43C /* PurchaseViewController.swift */; };
 		4FF19DC12214EC5B00880072 /* TrackArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF19DC02214EC5B00880072 /* TrackArc.swift */; };
 		4FF1C95122A76B6300E052CF /* Inter-UI-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F4502EB2193C6A400002CD0 /* Inter-UI-Black.ttf */; };
 		4FF1C95222A76B6300E052CF /* Inter-UI-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F4502EC2193C6A500002CD0 /* Inter-UI-BlackItalic.ttf */; };
@@ -86,6 +93,14 @@
 		4F634420216174CD0099687C /* exercises.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exercises.json; sourceTree = "<group>"; };
 		4F7ACD6922A5071500494719 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		4F921C532216D6B000D0806C /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		4F9DB94422E6E86800038633 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F9DB94622E6EECA00038633 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4F9DB94822E6EEE100038633 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		4FE2EB5A22E7C15D0089F43C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4FE2EB5C22E7C1A70089F43C /* EightMinuteAbs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EightMinuteAbs.entitlements; sourceTree = "<group>"; };
+		4FE2EB5E22E7C2420089F43C /* 8MAPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8MAPurchases.swift; sourceTree = "<group>"; };
+		4FE2EB6022E7C2D40089F43C /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		4FE2EB6222E7C41F0089F43C /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		4FF19DC02214EC5B00880072 /* TrackArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackArc.swift; sourceTree = "<group>"; };
 		4FF1DD2B2105757400C34E0A /* EightMinuteAbs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightMinuteAbs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF1DD2E2105757400C34E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE2EB5B22E7C15D0089F43C /* StoreKit.framework in Frameworks */,
 				4FF1DD6021058D1B00C34E0A /* AVFoundation.framework in Frameworks */,
 				AC875698DAA8A669B4260632 /* Pods_EightMinuteAbs.framework in Frameworks */,
 			);
@@ -183,6 +199,15 @@
 			path = Segues;
 			sourceTree = "<group>";
 		};
+		4FE2EB5D22E7C2230089F43C /* InAppPurchases */ = {
+			isa = PBXGroup;
+			children = (
+				4FE2EB5E22E7C2420089F43C /* 8MAPurchases.swift */,
+				4FE2EB6022E7C2D40089F43C /* IAPHelper.swift */,
+			);
+			path = InAppPurchases;
+			sourceTree = "<group>";
+		};
 		4FF19DC22214EC6000880072 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +235,9 @@
 			children = (
 				4FF1DD302105757400C34E0A /* ViewController.swift */,
 				4F4502E72193BEC300002CD0 /* TrackingHomeViewController.swift */,
+				4F9DB94622E6EECA00038633 /* SettingsViewController.swift */,
+				4FE2EB6222E7C41F0089F43C /* PurchaseViewController.swift */,
+				4F9DB94822E6EEE100038633 /* FeedbackViewController.swift */,
 				4F161F9122B0755C0010C524 /* PopUps */,
 			);
 			path = Controller;
@@ -240,7 +268,9 @@
 		4FF1DD2D2105757400C34E0A /* EightMinuteAbs */ = {
 			isa = PBXGroup;
 			children = (
+				4FE2EB5C22E7C1A70089F43C /* EightMinuteAbs.entitlements */,
 				4FF1DD2E2105757400C34E0A /* AppDelegate.swift */,
+				4FE2EB5D22E7C2230089F43C /* InAppPurchases */,
 				4FF19DC32214EC6A00880072 /* Model */,
 				4FF19DC22214EC6000880072 /* View */,
 				4FF19DC42214EC7200880072 /* Controller */,
@@ -250,6 +280,7 @@
 				4FF1DD352105757600C34E0A /* Assets.xcassets */,
 				4FF1DD372105757700C34E0A /* LaunchScreen.storyboard */,
 				4FF1DD3A2105757700C34E0A /* Info.plist */,
+				4F9DB94422E6E86800038633 /* GoogleService-Info.plist */,
 				4F4502EB2193C6A400002CD0 /* Inter-UI-Black.ttf */,
 				4F4502EC2193C6A500002CD0 /* Inter-UI-BlackItalic.ttf */,
 				4F4502ED2193C6A500002CD0 /* Inter-UI-Bold.ttf */,
@@ -284,6 +315,7 @@
 		4FF1DD5E21058D1B00C34E0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4FE2EB5A22E7C15D0089F43C /* StoreKit.framework */,
 				4FF1DD5F21058D1B00C34E0A /* AVFoundation.framework */,
 				8BB53319B54F9337EC31155F /* Pods_EightMinuteAbs.framework */,
 				A74211686A4145B56FACB2A3 /* Pods_EightMinuteAbsTests.framework */,
@@ -369,6 +401,14 @@
 				TargetAttributes = {
 					4FF1DD2A2105757400C34E0A = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					4FF1DD3E2105757700C34E0A = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -414,6 +454,7 @@
 				4FF1C95622A76B6300E052CF /* Inter-UI-Medium.ttf in Resources */,
 				4FF1C95722A76B6300E052CF /* Inter-UI-MediumItalic.ttf in Resources */,
 				4FF1C95122A76B6300E052CF /* Inter-UI-Black.ttf in Resources */,
+				4F9DB94522E6E86800038633 /* GoogleService-Info.plist in Resources */,
 				4FF1C95322A76B6300E052CF /* Inter-UI-Bold.ttf in Resources */,
 				4FF1C95822A76B6300E052CF /* Inter-UI-Regular.ttf in Resources */,
 				4F10605F21068C8200E33A27 /* AirHorn.wav in Resources */,
@@ -517,21 +558,27 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-EightMinuteAbs/Pods-EightMinuteAbs-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -612,12 +659,17 @@
 				4F7ACD6A22A5071500494719 /* Colors.swift in Sources */,
 				4FF1DD5D21058CB500C34E0A /* Sound.swift in Sources */,
 				4FF891B1220B87DD00DD2CE5 /* CircleLayerView.swift in Sources */,
+				4F9DB94922E6EEE100038633 /* FeedbackViewController.swift in Sources */,
+				4FE2EB6122E7C2D40089F43C /* IAPHelper.swift in Sources */,
 				4FF19DC12214EC5B00880072 /* TrackArc.swift in Sources */,
 				4F63441D21615BB80099687C /* InfoPopUpViewController.swift in Sources */,
+				4FE2EB5F22E7C2420089F43C /* 8MAPurchases.swift in Sources */,
 				4F4502F52193C6BE00002CD0 /* SegueFromBottom.swift in Sources */,
 				4FF1DD642105923C00C34E0A /* AgrippaExtensions.swift in Sources */,
 				4F4502F42193C6BE00002CD0 /* SegueFromTop.swift in Sources */,
+				4F9DB94722E6EECA00038633 /* SettingsViewController.swift in Sources */,
 				4F3CA5AD22AE5AF60094FDB9 /* CircleCollectionViewCell.swift in Sources */,
+				4FE2EB6322E7C41F0089F43C /* PurchaseViewController.swift in Sources */,
 				4FF1DD2F2105757400C34E0A /* AppDelegate.swift in Sources */,
 				4F4502F62193C6BE00002CD0 /* SegueFromLeft.swift in Sources */,
 				4F4502E82193BEC300002CD0 /* TrackingHomeViewController.swift in Sources */,
@@ -794,6 +846,7 @@
 			baseConfigurationReference = 9F281E0A21A446244559D9F9 /* Pods-EightMinuteAbs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EightMinuteAbs/EightMinuteAbs.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CY5UTYJH5;
@@ -816,6 +869,7 @@
 			baseConfigurationReference = 9E9119768B7DFDBCB88AA00B /* Pods-EightMinuteAbs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EightMinuteAbs/EightMinuteAbs.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CY5UTYJH5;

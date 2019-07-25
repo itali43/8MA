@@ -11,6 +11,8 @@ target 'EightMinuteAbs' do
     pod 'Charts'
     pod 'RealmSwift'
     pod 'PopupDialog', '~> 0.8'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Database'
 
   target 'EightMinuteAbsTests' do
     inherit! :search_paths

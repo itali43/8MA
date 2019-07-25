@@ -36,7 +36,7 @@ class Workout: Object {
 class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIPopoverPresentationControllerDelegate  {
     
     @IBOutlet weak var workoutGrid: UICollectionView!
-
+    var scrollingHappened = true
     var daysFromWorkOutArr = [Double]()
     var totalWorkouts = 0
     
@@ -67,12 +67,21 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
         }
     }
 
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let visibleCells = workoutGrid.visibleCells
+        for i in visibleCells {
+            i.layer.borderColor = UIColor.clear.cgColor
+        }
+        
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderWidth = 0
+        cell?.layer.borderColor = UIColor.clear.cgColor
+        print("deselect")
 
     }
     
@@ -82,8 +91,7 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
         let date = Date(timeIntervalSinceNow: TimeInterval(indexPath.row * -86400))
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderColor = UIColor(red: 6/100, green: 20/100, blue: 65/100, alpha: 1.0).cgColor
-        cell?.layer.borderWidth = 4
-
+        cell?.layer.borderWidth = 3
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd"
         dateFormatter.timeZone = .current
@@ -132,20 +140,29 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
                 // user worked out on this date
                 if workoutDayCount == 1 {
                     dateLabel.text = localDate + "- Worked Out Once"
-                } else if workoutDayCount == 2{
+                } else if workoutDayCount == 2 {
                     dateLabel.text = localDate + "- Worked Out Twice"
                 } else {
                     dateLabel.text = localDate + "- Worked Out x\(workoutDayCount)"
                 }
-                print("there was workout")
+//                print("there was workout")
                 return
             } else {
                 // user did NOT work out on this date
                 dateLabel.text = localDate + "- Rest Day"
-                print("rest day.. \(localDate)")
+//                print("rest day.. \(localDate)")
                 
 
             }
+        }
+        if datesWorkedOut.count == 0 {
+            print("none")
+            let dateFormatter2 = DateFormatter()
+            dateFormatter2.dateFormat = "MM/dd"
+            dateFormatter2.timeZone = .current
+            let wkoutDate = dateFormatter2.string(from: date)
+            dateLabel.text = localDate + "- Rest Day"
+
         }
 
     }
@@ -159,6 +176,9 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
 
 //        cell.layer.borderColor = UIColor(red: 6/100, green: 20/100, blue: 65/100, alpha: 1.0).cgColor
 //        cell.layer.borderWidth = 1
+        print("welcome to the cell for item at!")
+        cell.layer.borderColor = UIColor.clear.cgColor
+        
         
         let hadWorkout = daysFromWorkOutArr.contains { $0 == Double(indexPath.row)}
 //        print ("hadWorkout: \(hadWorkout),   indexPath \(indexPath.row)")
@@ -305,7 +325,9 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
-             NSAttributedString.Key.font: UIFont(name: "Avenir-Black", size: 21)!]
+             NSAttributedString.Key.font: UIFont(name: "InterUI-Bold", size: 21)!]
+        
+        self.workoutGrid.allowsMultipleSelection = false
 
         DispatchQueue.main.async {
             /*
@@ -395,3 +417,10 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
 //
 //    }
 }
+//extension UICollectionView {
+//
+//    func deselectAllItems(animated: Bool) {
+//        guard let selectedItems = indexPathsForSelectedItems else { return }
+//        for indexPath in selectedItems { deselectItem(at: indexPath, animated: animated) }
+//    }
+//}
