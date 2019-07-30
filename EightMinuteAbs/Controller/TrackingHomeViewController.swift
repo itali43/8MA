@@ -325,7 +325,7 @@ class TrackingHomeViewController: UIViewController, UICollectionViewDataSource, 
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
-             NSAttributedString.Key.font: UIFont(name: "InterUI-Bold", size: 21)!]
+             NSAttributedString.Key.font: UIFont(name: "InterUI-Bold", size: 18)!]
         
         self.workoutGrid.allowsMultipleSelection = false
 

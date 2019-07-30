@@ -56,7 +56,20 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     "Reverse Plank",
     "Alt. Sides Superman",
     "Donkey Kicks",
+    "Planks",
     ]
+    
+    
+    
+    var plankExercises = [
+        "Planks",
+        "Planks",
+        "Planks",
+        "Side Planks",
+        "Side Plank Raises",
+        "Reverse Plank",
+    ]
+
     var roundCounter = 0
     var seconds = 481
     var secondsPast: CGFloat = 0.0
@@ -88,7 +101,18 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        // decide which workout to do
+        if Agrippa.defaultexists(forKey: "workout") == true {
+            // we have a workout already
+            let num = UserDefaults.standard.integer(forKey: "workout")
+            changeWorkout(toNum: num)
+        } else {
+            // no workout yet, must be first time, set to CLASSIC!
+            UserDefaults.standard.set(0, forKey: "workout")
+            title = "Classic 8MA"
+        }
+        
     }
     //TO DO--====
     // ADD background mode
@@ -114,7 +138,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
 
     @objc func updateTimer() {
-        print(seconds)
+//        print(seconds)
         if seconds < 1 {
             timer.invalidate()
             roundNumberLabel.text = "1 of 8"
@@ -171,12 +195,62 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
 
     func randomExerciseUpdate() { // should add a non repeating feature later
         print("update exercise")
-//        if roundCounter != 8 {
+        
+        // if classic
+        let wknum = UserDefaults.standard.integer(forKey: "workout")
+        switch wknum {
+        case 0:
+            print("Classic Workout")
+            //        if roundCounter != 8 {
             let randomIndex = Int(arc4random_uniform(UInt32(exercises.count)))
             exerciseLabel.text = exercises[randomIndex]
             abExercise = AbEx(name: AbEx.getName(id: randomIndex), details: AbEx.getDetails(id: randomIndex), id: randomIndex)
             exerciseLabel.text = abExercise.name
-//        } else {print("ending")}
+            //        } else {print("ending")}
+        case 1:
+            print("russian twist Workout")
+
+            // Twist + Shout
+            let randomIndex = 8
+            exerciseLabel.text = exercises[randomIndex]
+            abExercise = AbEx(name: AbEx.getName(id: randomIndex), details: AbEx.getDetails(id: randomIndex), id: randomIndex)
+            exerciseLabel.text = abExercise.name
+
+        case 2:
+            
+            print("planks Workout")
+
+            // Plethora O'Planks
+            if roundCounter % 2 == 0 {
+                // even round
+                let randomIndex = Int(arc4random_uniform(UInt32(exercises.count)))
+                exerciseLabel.text = exercises[randomIndex]
+                abExercise = AbEx(name: AbEx.getName(id: randomIndex), details: AbEx.getDetails(id: randomIndex), id: randomIndex)
+                exerciseLabel.text = abExercise.name
+                print("round of planks: \(roundCounter)")
+            } else {
+                // send them a plank, it's odd
+                let randomIndex = Int(arc4random_uniform(UInt32(plankExercises.count)))
+                exerciseLabel.text = plankExercises[randomIndex]
+                abExercise = AbEx(name: plankExercises[randomIndex], details: AbEx.getDetailsFrom(name: plankExercises[randomIndex]), id: randomIndex)
+                exerciseLabel.text = abExercise.name
+                print("round of planks, should be planks: \(roundCounter)")
+
+
+            }
+
+            
+        default:
+            //        if roundCounter != 8 {
+            let randomIndex = Int(arc4random_uniform(UInt32(exercises.count)))
+            exerciseLabel.text = exercises[randomIndex]
+            abExercise = AbEx(name: AbEx.getName(id: randomIndex), details: AbEx.getDetails(id: randomIndex), id: randomIndex)
+            exerciseLabel.text = abExercise.name
+            //        } else {print("ending")}
+
+        }
+        
+        
     }
     
     func soundAirHorn() {
@@ -372,9 +446,31 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
 
     
+    func changeWorkout(toNum: Int) {
+        if toNum == 0 {
+            title = "Classic 8MA"
+        }
+        if toNum == 1 {
+            title = "Twist + Shout"
+        }
+        if toNum == 2 {
+            title = "Plethora O'Planks"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // decide which workout to do
+        if Agrippa.defaultexists(forKey: "workout") == true {
+            // we have a workout already
+            let num = UserDefaults.standard.integer(forKey: "workout")
+            changeWorkout(toNum: num)
+        } else {
+            // no workout yet, must be first time, set to CLASSIC!
+            UserDefaults.standard.set(0, forKey: "workout")
+            title = "8MA"
+        }
         
         // if never been used, add the sound default and set to airhorn. if has, do nothing
         if Agrippa.defaultexists(forKey: "isAirhorn") == false {
@@ -397,7 +493,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
 
         self.navigationController?.navigationBar.titleTextAttributes =
             [NSAttributedString.Key.foregroundColor: UIColor.white,
-             NSAttributedString.Key.font: UIFont(name: "InterUI-Regular", size: 30)!]
+             NSAttributedString.Key.font: UIFont(name: "InterUI-Bold", size: 18)!]
 
         UIApplication.shared.statusBarStyle = .lightContent
         UIApplication.shared.statusBarStyle = .default

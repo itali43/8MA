@@ -62,7 +62,35 @@ class Agrippa {
     }
 
     
-    
+    static func popUpAlertSmallText(title: String, message: String, vc: UIViewController) {
+        
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: message)
+        // appearance of dialog
+        let fontMsg = UIFont(name: "Avenir-Medium", size: 12)!
+        let fontTitle = UIFont(name: "Avenir-Black", size: 25)!
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        dialogAppearance.backgroundColor  = .white
+        dialogAppearance.titleFont  = fontTitle
+        dialogAppearance.titleColor = UIColor(hexStr: "1034A6", alpha: 1.0)
+        dialogAppearance.titleTextAlignment   = .center
+        dialogAppearance.messageFont  =  fontMsg
+        dialogAppearance.messageColor = UIColor(hexStr: "000000", alpha: 1.0)
+        dialogAppearance.messageTextAlignment =  .center
+        
+        // Create buttons
+        let oneButton = DefaultButton(title: "Ok") {
+            print("You canceled the car dialog.")
+        }
+        oneButton.titleFont = fontTitle
+        oneButton.buttonColor = .white
+        oneButton.titleColor = UIColor(hexStr: "1034A6", alpha: 1.0)
+        oneButton.separatorColor = UIColor(hexStr: "1034A6", alpha: 1.0)
+        oneButton.titleFont = UIFont(name: "Avenir-Black", size: 20)!
+        popup.addButtons([ oneButton])
+        vc.present(popup, animated: true, completion: nil)
+    }
+
     
     
     

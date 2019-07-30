@@ -31,6 +31,24 @@ struct AbEx {
         }
     }
     
+    static func getDetailsFrom(name: String) -> String {
+        let path = Bundle.main.path(forResource: "exercises", ofType: "json")!
+        let jsonString = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
+        let json = JSON(parseJSON: jsonString!)
+        //        print("json: \(json)")
+        for i in 0...json.count {
+            //            print("exists")
+            if json[i]["name"].stringValue == name {
+                return json[i]["details"].stringValue
+            } else {
+                print("not yet planks details")
+            }
+            
+        }
+        return "Russian Twist"
+    }
+
+    
     static func getDetails(id: Int) -> String {
         let path = Bundle.main.path(forResource: "exercises", ofType: "json")!
         let jsonString = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
