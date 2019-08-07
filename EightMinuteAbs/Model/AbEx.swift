@@ -60,7 +60,7 @@ struct AbEx {
             
         } else {
             print("no exist")
-            return "Russian Twist: \n Assume crunch position with feet and head held above floor.  Move exercise ball or interlocked hands back and forth above abs alternating sides hitting the floor."
+            return "Assume crunch position with feet and head held above floor.  Move exercise ball or interlocked hands back and forth above abs alternating sides hitting the floor."
             
         }
     }

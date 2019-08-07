@@ -553,6 +553,43 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
             popoverViewController.modalPresentationStyle = UIModalPresentationStyle.popover
             popoverViewController.popoverPresentationController!.delegate = self
             let vc = segue.destination as? InfoPopUpViewController
+            
+            
+            // count words in details
+            let detail = abExercise.details
+            let components = detail.count
+            print("comps: \(components)")
+            // multiply word count by proper fraction, use result as # of lines (lines*30 + 10)
+            let width = Int(self.view.frame.width)
+            print("width: \(width)")
+            let widthInCharacters = width / 16
+            print("widthInChar: \(widthInCharacters)")
+            
+            // use width in characters and compare to number of characters, then take the next largest
+            var lines = components / widthInCharacters
+//            print(lines)
+
+//            let lines = 1 + (components / 7)
+            print("lines: \(lines)")
+//            let height = 30 * lines + 10 // ten is for margin
+//            // one line is 30, plus 10 for margin
+////            print(type(of: self.view.frame.width))
+//            print(UIDevice.modelName)
+//            if UIDevice.modelName == "iPhone SE" {
+//                let linesSE = 1 + (words.count / 6)
+//                let heightSE = 30 * linesSE + 25 // ten is for margin
+            if lines >= 9 {
+                lines = 9
+                vc?.preferredContentSize = CGSize(width: Int(self.view.frame.width) + 50, height: (lines * 29))
+
+            } else {
+                vc?.preferredContentSize = CGSize(width: Int(self.view.frame.width) + 50, height: (lines * 29))
+                }
+//            } else {
+//                vc?.preferredContentSize = CGSize(width: Int(self.view.frame.width) + 50, height: height)
+//
+//            }
+
             vc?.passReceive = abExercise.details
         }
 

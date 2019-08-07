@@ -14,11 +14,18 @@ class InfoPopUpViewController: UIViewController {
     
     var passReceive =  "Russian Twist: \n Assume crunch position with feet and head held above floor.  Move exercise ball or interlocked hands back and forth above abs alternating sides hitting the floor."
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        infoView.centerVertically()
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         infoView.clipsToBounds = true
         infoView.layer.cornerRadius = 10
         infoView.text = passReceive
+
         // Do any additional setup after loading the view.
     }
 
@@ -38,4 +45,15 @@ class InfoPopUpViewController: UIViewController {
     }
     */
 
+}
+extension UITextView {
+    
+    func centerVertically() {
+        let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
+        let size = sizeThatFits(fittingSize)
+        let topOffset = (bounds.size.height - size.height * zoomScale) / 2
+        let positiveTopOffset = max(1, topOffset)
+        contentOffset.y = -positiveTopOffset
+    }
+    
 }
